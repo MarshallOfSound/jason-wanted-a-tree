@@ -1,0 +1,26 @@
+{
+  "name": "GitHub Tree",
+  "description": "I heard you like trees, and GitHub, so we put trees in your GitHub!",
+  "version": "1.0.1",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.github.com/*"],
+      "css": [
+        "src/content.css"
+      ],
+      "js": [
+        "src/content.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://*.github.com/"
+  ]
+}

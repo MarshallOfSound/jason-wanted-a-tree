@@ -1,0 +1,142 @@
+.review-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.sticky-groot {
+  position: sticky;
+  align-self: flex-start;
+  top: 80px;
+  overflow: auto;
+}
+
+.groot > div {
+  max-height: calc(100vh - 100px);
+  overflow: auto;
+  transform: translate3d(0, 0, 0);
+  user-select: none;
+  padding: 8px;
+  padding-left: 0;
+}
+
+.groot.loading > div {
+  padding-top: 0;
+}
+
+.groot-loader {
+  background-color: var(--color-bg-secondary);
+  border-bottom: 1px solid var(--color-border-primary);
+  width: calc(100% + 8px);
+  margin-bottom: 8px;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  padding: 8px 16px;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  display: flex;
+  font-size: 14px;
+  align-items: center;
+}
+
+.groot-loader svg {
+  height: 26px;
+  margin-right: 8px;
+}
+
+.groot details > summary > svg {
+  height: 16px;
+}
+
+.groot details[open] > summary > svg:first-child {
+  display: none;
+}
+
+.groot details:not([open]) > summary > svg:not(:first-child) {
+  display: none;
+}
+
+.review-container .groot {
+  width: 420px;
+  margin-right: 20px;
+  background-color: var(--color-gist-editor-bg);
+  border: 1px solid var(--color-border-primary,#ddd);
+  border-radius: 6px;
+}
+
+@media (max-width: 1620px) {
+  .review-container .groot {
+    width: 350px;
+  }
+}
+
+@media (max-width: 940px) {
+  .review-container .groot {
+    display: none;
+  }
+}
+
+.review-container #files {
+  flex: 1;
+}
+
+.groot-change-icon, .groot-add-icon, .groot-delete-icon, .groot-rename-icon {
+  margin-right: 8px;
+  margin-left: 4px;
+}
+
+.groot-change-icon {
+  color: var(--color-auto-yellow-7);
+}
+
+.groot-add-icon {
+  color: var(--color-auto-green-5);
+}
+
+.groot-delete-icon {
+  color: var(--color-text-danger);
+}
+
+.groot-rename-icon {
+  color: var(--color-text-tertiary);
+}
+
+.groot-file-link {
+  display: flex !important;
+}
+
+.groot-file-link .groot-file-name {
+  line-break: anywhere;
+  flex: 1;
+  padding-right: 6px;
+}
+
+.groot-file-link .groot-file-name[data-unviewed] {
+  font-weight: bold;
+}
+
+.groot-file-link .groot-file-delta {
+  margin-right: 4px;
+}
+
+.Link--primary-but-better {
+  color: var(--color-text-primary) !important
+}
+
+.Link--primary-but-better:hover {
+  color: var(--color-text-link) !important;
+  text-decoration: none !important;
+}
+
+.Link--primary-but-better:hover > span:first-of-type {
+  text-decoration: underline !important;
+}
+
+.color-text-success-but-better {
+  color: var(--color-text-success) !important;
+  text-decoration: none !important;
+}
+
+.color-text-danger-but-better {
+  color: var(--color-text-danger) !important;
+  text-decoration: none !important;
+}
